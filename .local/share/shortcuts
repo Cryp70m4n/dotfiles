@@ -1,0 +1,12 @@
+#!/bin/bash
+
+DMENU='dmenu -i -l 10'
+choice=$(echo -e "bookmarks\nbrowser\nimages\nshutdown\nquit-shortcuts" | $DMENU)
+
+case "$choice" in
+	bookmarks) xdotool type $(grep -v '^#' ~/.local/share/bookmarks | dmenu -i -l 50 | cut -d'  '  -f1);;
+    browser) $1 | cat ~/.config/bookmarks | dmenu -i -l 10 | xargs brave;;
+    images) cd ~/Pictures | ls ~/Pictures/*.{png,jpg,jpeg} | dmenu -i -l 10 | xargs feh;;
+    shutdown) ~/.local/share/exit_menu;;
+    quit-shortcuts) exit 0;;
+esac
