@@ -64,6 +64,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_r,      spawn,          SHCMD("shortcuts") },
 	{ MODKEY|ShiftMask,    			XK_s,      spawn,    	   SHCMD("flameshot gui") },
 	{ MODKEY|ShiftMask,				XK_v,	   spawn,		   SHCMD("brave") },
+	{ MODKEY|ShiftMask,				XK_e,	   spawn,	       SHCMD("emacs") },
 
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
