@@ -92,4 +92,4 @@ doom-variable-pitch-font (font-spec :family "Jetbrains Mono" :size 16)
 (transient-mark-mode 1) ;; No region when it is not highlighted
 (setq cua-keep-region-after-copy t)
 
-;;(setq projectile-enable-caching nil) ;; This way you don't have to call projectile-invalidate-cache every time you create new file from terminal
+(setq projectile-enable-caching nil) ;; This way you don't have to call projectile-invalidate-cache every time you create new file from terminal
